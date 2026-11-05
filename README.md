@@ -97,3 +97,15 @@ Settings → Pages → Source 选择 GitHub Actions。site 为 https://sakurecat
 - 恢复错误发布：工作区干净时 git revert <问题提交SHA>，检查后 push，不改写历史。
 
 本期只有博客创建和发文，不包含评论、数据库、社区同步或任务管理。
+
+## 当前 Windows 环境说明
+
+本机 Git 需要使用系统已启用的代理，已为这个 clone 单独设置 `http://127.0.0.1:7897`。如果关闭代理或换了端口，请同步调整此仓库的 Git 配置；不影响其他仓库。第二个系统的 clone 不会继承这个本地设置。
+
+```sh
+git config --local --get http.proxy
+# 不再需要代理时：
+git config --local --unset http.proxy
+```
+
+npm 缓存在项目内的 `.npm-cache`，已被 Git 忽略，避免依赖系统盘上不可写的全局缓存。KaTeX 的间接依赖通过 overrides 统一为直接依赖版本，防止公式插件带入旧版；更新后必须重新检查公式。

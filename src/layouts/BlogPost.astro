@@ -1,0 +1,9 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import Page from './Page.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+type Props = CollectionEntry<'blog'>['data'];
+const { title, description, pubDate, updatedDate, tags, heroImage, heroAlt } = Astro.props;
+---
+<Page title={title} description={description}><article><div class="article-heading"><a class="back-link" href="/blog/">← 全部文章</a><div class="post-meta"><FormattedDate date={pubDate} /><span>{tags.join(' / ')}</span></div><h1>{title}</h1><p class="article-description">{description}</p>{updatedDate && <p class="muted">更新于 <FormattedDate date={updatedDate} /></p>}</div>{heroImage && <Image class="hero-image" src={heroImage} alt={heroAlt ?? title} width={1440} />}<div class="prose"><slot /></div><div class="article-end"><span>— 记录于 RobotX</span><a href="/blog/">继续阅读 →</a></div></article></Page>

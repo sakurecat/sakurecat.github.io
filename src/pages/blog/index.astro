@@ -1,0 +1,7 @@
+---
+import Page from '../../layouts/Page.astro';
+import PostList from '../../components/PostList.astro';
+import { getPublishedPosts } from '../../lib/posts';
+const posts = await getPublishedPosts();
+---
+<Page title="文章" description="RobotX 的技术笔记与实践记录。"><section class="page-intro"><p class="eyebrow">THE ARCHIVE</p><h1>文章<span class="title-dot">.</span></h1><p>从一个问题出发，留下可回看的记录。</p></section><div class="section-heading"><h2>全部文章</h2><span class="muted">共 {posts.length} 篇</span></div><PostList posts={posts} /></Page>

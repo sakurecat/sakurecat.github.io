@@ -1,0 +1,67 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "博客：新建文章",
+      "type": "process",
+      "command": "bash",
+      "args": ["scripts/vscode-blog.sh", "new", "${input:postSlug}", "${input:postTitle}"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "博客：启动预览",
+      "type": "process",
+      "command": "bash",
+      "args": ["scripts/vscode-blog.sh", "start"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "博客：停止预览",
+      "type": "process",
+      "command": "bash",
+      "args": ["scripts/vscode-blog.sh", "stop"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "博客：预览状态",
+      "type": "process",
+      "command": "bash",
+      "args": ["scripts/vscode-blog.sh", "status"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "博客：预览日志",
+      "type": "process",
+      "command": "bash",
+      "args": ["scripts/vscode-blog.sh", "logs"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "博客：发布前检查",
+      "type": "process",
+      "command": "bash",
+      "args": ["scripts/vscode-blog.sh", "check"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "group": { "kind": "build", "isDefault": true },
+      "presentation": { "reveal": "always", "panel": "dedicated", "clear": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "博客：安装依赖",
+      "type": "process",
+      "command": "bash",
+      "args": ["scripts/vscode-blog.sh", "install"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    { "id": "postSlug", "type": "promptString", "description": "文章文件名（小写英文、数字和连字符），例如 ubuntu-note" },
+    { "id": "postTitle", "type": "promptString", "description": "文章标题，可以使用中文", "default": "新的技术笔记" }
+  ]
+}

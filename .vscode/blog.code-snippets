@@ -1,0 +1,30 @@
+{
+  "博客图片": {
+    "scope": "markdown,mdx",
+    "prefix": "blogimg",
+    "body": [
+      "![${1:图片说明}](../../assets/${2:文章文件名}/${3:example.png})"
+    ],
+    "description": "引用 src/assets 中的文章图片，支持编辑器和网站预览"
+  },
+  "代码块": {
+    "scope": "markdown,mdx",
+    "prefix": "blogcode",
+    "body": [
+      "```${1:python}",
+      "$0",
+      "```"
+    ],
+    "description": "插入带语言标记的代码块"
+  },
+  "独立公式": {
+    "scope": "markdown,mdx",
+    "prefix": "blogmath",
+    "body": [
+      "\\$\\$",
+      "${1:E = mc^2}",
+      "\\$\\$"
+    ],
+    "description": "插入 KaTeX 独立公式"
+  }
+}

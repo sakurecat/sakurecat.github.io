@@ -2,8 +2,8 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "command": "./node_modules/.bin/astro dev",
-      "name": "Development server",
+      "command": "bash scripts/vscode-blog.sh start",
+      "name": "博客：启动后台预览（Ubuntu）",
       "request": "launch",
       "type": "node-terminal"
     }

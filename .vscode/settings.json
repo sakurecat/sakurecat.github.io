@@ -1,0 +1,40 @@
+{
+  "files.encoding": "utf8",
+  "files.insertFinalNewline": true,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1500,
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.lineNumbers": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    },
+    "editor.tabCompletion": "on",
+    "files.trimTrailingWhitespace": false
+  },
+  "markdown.preview.breaks": false,
+  "markdown.preview.scrollPreviewWithEditor": true,
+  "markdown.preview.scrollEditorWithPreview": true,
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/.npm-cache": true,
+    "**/.astro": true,
+    "**/dist": true
+  },
+  "search.exclude": {
+    "**/.npm-cache": true,
+    "**/dist": true
+  },
+  "git.enableSmartCommit": false,
+  "git.confirmSync": true,
+  "git.openRepositoryInParentFolders": "never",
+  "editor.pasteAs.enabled": true,
+  "editor.dropIntoEditor.enabled": true,
+  "markdown.editor.drop.enabled": "always",
+  "markdown.copyFiles.destination": {
+    "/src/content/blog/**/*": "../../assets/${documentBaseName}/"
+  },
+  "markdown.copyFiles.overwriteBehavior": "nameIncrementally"
+}

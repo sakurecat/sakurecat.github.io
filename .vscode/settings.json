@@ -36,5 +36,6 @@
   "markdown.copyFiles.destination": {
     "/src/content/blog/**/*": "../../assets/${documentBaseName}/"
   },
-  "markdown.copyFiles.overwriteBehavior": "nameIncrementally"
+  "markdown.copyFiles.overwriteBehavior": "nameIncrementally",
+  "git.useEditorAsCommitInput": false
 }

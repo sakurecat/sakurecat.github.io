@@ -1,0 +1,6 @@
+{
+  "folders": [{ "name": "RobotX 博客", "path": "." }],
+  "settings": {
+    "markdown.validate.enabled": true
+  }
+}

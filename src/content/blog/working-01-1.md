@@ -2,7 +2,7 @@
 title: "working-01-1"
 description: "目前为止在UAV-TDLAS-GSL方面短距离（20m左右）的定位误差稳定在2.5m；本周针对UAV-TDLAS-GSL的任务，有以下几个方面的要求：鲁棒、高精度；除此之外，针对UGV-TDLAS-GSL任务，我需要你出一个可行性方案分析；"
 pubDate: "2026-11-11T06:10:41.800Z"
-draft: true
+draft: false
 tags: ["技术笔记"]
 ---
 
